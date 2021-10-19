@@ -1,0 +1,20 @@
+// colors 
+
+$blue: hsl(236, 80%, 57%);
+$light-blue: hsl(234, 32%, 17%);
+$dark-blue: hsl(248, 35%, 8%);
+$text-color: hsl(240, 9%, 91%);
+$text-gray-color: hsl(243, 10%, 66%);
+$placeholder-color: hsl(231, 9%, 42%);
+$btn-background: hsl(230, 5%, 45%);
+
+// font family
+$font-nunito: "Nunito", sans-serif;
+
+// extends
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

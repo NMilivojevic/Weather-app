@@ -1,0 +1,113 @@
+.content {
+  display: flex;
+  height: 100vh;
+  @include response(ipadPro) {
+    flex-direction: column;
+  }
+  @include response(md) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  @include response(sm) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &-left {
+    background-color: $light-blue;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      background-image: url("../img/CloudBackground.png");
+      background-repeat: no-repeat;
+      background-size: 130%;
+      position: absolute; // pozicionira element preko svih i zbog toga mora z-index -1 da bi mogli da kliknemo btn gore
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.07;
+      z-index: -1;
+    }
+
+    footer {
+      @include response(sm) {
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    @include response(sm) {
+      height: 100vh;
+    }
+  }
+
+  &-right {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    .temp-types {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        color: $text-color;
+        margin-bottom: 0;
+        a {
+          color: $blue;
+          text-decoration: none;
+          font-weight: 700;
+          transition: all 0.3s;
+          &:hover {
+            opacity: 0.7;
+            transition: all 0.3s;
+          }
+        }
+      }
+      div {
+        display: flex;
+      }
+    }
+    .days {
+      display: flex;
+      .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .temps {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      @include response(sm) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+    }
+
+    .current-day {
+      margin: 1.3rem 0px;
+      h2 {
+        text-align: left;
+      }
+      &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        .card {
+          min-width: calc(50% - 30px);
+        }
+
+        @include response(sm) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

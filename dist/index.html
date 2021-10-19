@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="icon" href="./img/Shower.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./animate.css/animate.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <div class="content-left">
+
+      <header>
+        <button class="btn" id="search_btn">Search for places</button>
+        <button class="icon-btn" id="gps_btn">
+          <span class="material-icons">gps_fixed</span>
+        </button>
+      </header>
+
+      <main>
+
+        <div class="icon">
+          <img src="./img/Showers.png" id="current_w_icon">
+        </div>
+
+        <div class="temp">
+          <div id="current-w-temp">27</div><span id="temp_symbol">&#176;C</span>
+        </div>
+
+        <div class="type" id="current_w_type">
+          Clear
+        </div>
+
+      </main>
+
+      <footer>
+        <div class="date">Today <span>&#183;</span> <span id="current_w_date"></span></div>
+        <div class="location">
+          <span class="material-icons">place</span>
+          <span id="current_w_location">Sofia</span>
+        </div>
+
+      </footer>
+
+      <section class="search-modal animate__animated" id="search_modal">
+        <div class="close-btn"><span class="material-icons">close</span></div>
+        <div class="input-group">
+          <label>
+            <input type="text" placeholder="Search location" id="searchInput">
+            <span class="material-icons">search</span>
+          </label>
+          <button id="search">Search</button>
+        </div>
+        <ul class="city-list">
+
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="content-right">
+
+      <div class="temp-types">
+        <p>Source:<a href="https://www.metaweather.com/" target="_blank"> MetaWeather API</a></p>
+        <div>
+          <button data-unit="celsius" class="icon-btn mr-1 bold active">&#176;C</button>
+          <button data-unit="fahrenheit" class="icon-btn bold">&#176;F</button>
+        </div>
+      </div>
+
+      <div class="days" id="days">
+
+        <!-- <div class="card">
+          <div class="title">Tomorrow</div>
+          <div class="icon">
+            <img src="./img/Clear.png" alt="day weather">
+          </div>
+          <div class="temps">
+            <div class="max">16 <span>&#176;C</span></div>
+            <div class="min">11 <span>&#176;C</span></div>
+          </div>
+        </div> -->
+
+      </div>
+
+      <div class="current-day">
+
+        <h2>Today's Highlights</h2>
+
+        <div class="current-day-grid">
+
+          <div class="card">
+            <div class="title">Wind status</div>
+            <div class="value">
+              <div id="wind_speed"></div>
+              <span>mph</span>
+            </div>
+            <div class="extras-wind">
+              <div class="icon mr-1"><span class="material-icons" id="wind_direction">navigation</span></div>
+              <div class="name" id="wind_compass">WSW</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="title">Humidity</div>
+            <div class="value">
+              <div id="humidity"></div>
+              <span>%</span>
+            </div>
+            <div class="extras-humidity">
+              <div class="progress-bar">
+                <div class="values">
+                  <span>0</span>
+                  <span>50</span>
+                  <span>100</span>
+                </div>
+                <div class="bar" id="humidity_percentage"></div>
+                <div class="percentage">%</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="title">Visibility</div>
+            <div class="value">
+              <div id="visibility"></div>
+              <span>miles</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="title">Air Pressure</div>
+            <div class="value">
+              <div id="air_pressure"></div>
+              <span>mbar</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="./moment/min/moment.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
