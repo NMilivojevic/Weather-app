@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   (function init() {
     // api request
     const config = {
-      api: "https://www.metaweather.com/api/location/",
+      api: "https://serene-tundra-03072.herokuapp.com/https://www.metaweather.com/api/location/",
       units: "celsius",
       cityID: "44418",
       tempData: null,
